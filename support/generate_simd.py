@@ -3,7 +3,7 @@ tedious to do by hand"""
 
 # must work in CPython 2.7 and 3.0+
 
-from __future__ import print_function
+
 
 import os
 import errno
@@ -687,7 +687,7 @@ def ifdef_support(req,antireq=frozenset(),indent=0):
     return '{0}#if{1}def SUPPORT_{2}'.format(indent,extra,macroize(list(req)[0]))
 
 def print_dependent(d_list,file,indent=0):
-    for req,mt_list in d_list.items():
+    for req,mt_list in list(d_list.items()):
         print(ifdef_support(req[0],req[1],indent=indent),file=file)
             
         for trans,intr,type,width in mt_list:
@@ -715,7 +715,7 @@ def generate(data_file,template_file,output_file):
     with open(data_file,'r') as input:
         intrinsics = json.load(input)
     
-    for name,intr in intrinsics.items():
+    for name,intr in list(intrinsics.items()):
         intr['cpuid'] = frozenset(intr['cpuid'])
         intr['name'] = name
 
@@ -817,7 +817,7 @@ def generate(data_file,template_file,output_file):
             m = func_search.match(line)
             if m:
                 dependent = {}
-                for type in types.values():
+                for type in list(types.values()):
                     for width in widths:
                         for ft in function_transforms:
                             if not ft.supported(type,width): continue

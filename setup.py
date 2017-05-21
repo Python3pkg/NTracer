@@ -78,7 +78,7 @@ GCC_EXTRA_COMPILE_ARGS = [
 # compile this package
 MSVC_OPTIMIZE_COMPILE_ARGS = ['/Ox','/fp:fast','/volatile:iso']
 
-DEFAULT_OPTIMIZED_DIMENSIONS = frozenset(range(3,9))
+DEFAULT_OPTIMIZED_DIMENSIONS = frozenset(list(range(3,9)))
 
 
 TRACER_TEMPLATE = """
@@ -115,7 +115,7 @@ def parse_ranges(x):
             end = parse_int(end)
             check_min(end)
             if end < start: start,end = end,start
-            items.update(range(start,end+1))
+            items.update(list(range(start,end+1)))
         else:
             items.add(start)
             

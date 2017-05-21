@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from __future__ import print_function
+
 
 
 import sys
@@ -349,9 +349,9 @@ def rotate(d1,d2):
     return inner
 
 UI.label('Turn',(15,50+20*ntracer.dimension))
-for i,dd in enumerate(itertools.combinations(range(ntracer.dimension),2)):
+for i,dd in enumerate(itertools.combinations(list(range(ntracer.dimension)),2)):
     UI.slider(
-        '{0} -> {1}'.format(*map(d_symbol,dd)),
+        '{0} -> {1}'.format(*list(map(d_symbol,dd))),
         (15,70+20*(i+ntracer.dimension)),
         rotate(*dd))
 

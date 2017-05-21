@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from __future__ import unicode_literals,print_function
+
 
 import math
 import fractions
@@ -396,13 +396,13 @@ class PolyTope:
                     pmap[l1][n] = inter[1]
                     pmap[l2][n] = inter[2]
 
-            for line,poss in pmap.items():
+            for line,poss in list(pmap.items()):
                 if len(poss) == 0: continue
                 if len(poss) == 1:
                     graph.remove(poss[0])
                     continue
                 
-                poss = sorted(poss.items(),key=(lambda x: x[1]))
+                poss = sorted(list(poss.items()),key=(lambda x: x[1]))
                 
                 if line.outer:
                     for i in range(len(poss)-1):

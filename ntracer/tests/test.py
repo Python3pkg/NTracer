@@ -18,7 +18,7 @@ class Tests(unittest.TestCase):
         d = 64
         while d > 4:
             nt = NTracer(d)
-            a = nt.Vector(range(d))
+            a = nt.Vector(list(range(d)))
             b = nt.Vector(x+12 for x in range(d-1,-1,-1))
             self.assertAlmostEqual(nt.dot(a,b),pydot(a,b))
             

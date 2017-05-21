@@ -47,8 +47,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'NTracer'
-copyright = u'2013-2014, Rouslan Korneychuk'
+project = 'NTracer'
+copyright = '2013-2014, Rouslan Korneychuk'
 
 
 # The version info for the project you're documenting, acts as replacement for
@@ -194,8 +194,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'NTracer.tex', u'NTracer Documentation',
-   u'Rouslan Korneychuk', 'manual'),
+  ('index', 'NTracer.tex', 'NTracer Documentation',
+   'Rouslan Korneychuk', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -224,8 +224,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'ntracer', u'NTracer Documentation',
-     [u'Rouslan Korneychuk'], 1)
+    ('index', 'ntracer', 'NTracer Documentation',
+     ['Rouslan Korneychuk'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -238,8 +238,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'NTracer', u'NTracer Documentation',
-   u'Rouslan Korneychuk', 'NTracer', 'One line description of project.',
+  ('index', 'NTracer', 'NTracer Documentation',
+   'Rouslan Korneychuk', 'NTracer', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -256,10 +256,10 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'NTracer'
-epub_author = u'Rouslan Korneychuk'
-epub_publisher = u'Rouslan Korneychuk'
-epub_copyright = u'2013, Rouslan Korneychuk'
+epub_title = 'NTracer'
+epub_author = 'Rouslan Korneychuk'
+epub_publisher = 'Rouslan Korneychuk'
+epub_copyright = '2013, Rouslan Korneychuk'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
